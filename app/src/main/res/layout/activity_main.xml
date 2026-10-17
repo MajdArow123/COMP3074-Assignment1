@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView lets the whole form scroll when the keyboard is open or the screen is small. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <!-- A ScrollView can only hold ONE child, so everything goes inside this vertical LinearLayout. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Hours worked. TextInputLayout shows the hint as a floating label and displays errors. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutHours"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="@string/hint_hours">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Hourly rate -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutRate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="@string/hint_rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tax rate as a percentage, e.g. 13 means 13% -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTax"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/hint_tax">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_calculate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/label_results"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <!-- The four output TextViews. Their text is set in code after Calculate is pressed. -->
+        <TextView
+            android:id="@+id/textPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textOvertimePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textTotalPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

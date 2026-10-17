@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Options menu for MainActivity. It is "inflated" (turned into real menu items)
+     in MainActivity.onCreateOptionsMenu(). showAsAction="ifRoom" shows "About"
+     directly in the ActionBar if there is space, otherwise in the overflow (⋮) menu. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/menu_about"
+        app:showAsAction="ifRoom" />
+</menu>

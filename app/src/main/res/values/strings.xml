@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+
+    <!-- MainActivity: input labels (hints) -->
+    <string name="title_pay_calculator">Pay Calculator</string>
+    <string name="hint_hours">Number of hours worked</string>
+    <string name="hint_rate">Hourly rate ($)</string>
+    <string name="hint_tax">Tax rate (%)</string>
+    <string name="button_calculate">Calculate</string>
+
+    <!-- MainActivity: results. %1$.2f = a decimal number with exactly 2 decimals -->
+    <string name="label_results">Results</string>
+    <string name="result_pay">Pay: $%1$.2f</string>
+    <string name="result_overtime_pay">Overtime Pay: $%1$.2f</string>
+    <string name="result_total_pay">Total Pay: $%1$.2f</string>
+    <string name="result_tax">Tax: $%1$.2f</string>
+
+    <!-- MainActivity: validation error messages -->
+    <string name="error_required">This field is required</string>
+    <string name="error_invalid_number">Please enter a valid number</string>
+    <string name="error_negative">Value cannot be negative</string>
+    <string name="error_tax_range">Tax rate must be between 0 and 100</string>
+
+    <!-- Options menu -->
+    <string name="menu_about">About</string>
+
+    <!-- AboutActivity -->
+    <string name="title_about">About</string>
+    <string name="label_name">Full name</string>
+    <string name="student_name">Mjd Arow</string>
+    <string name="label_student_id">Student ID</string>
+    <string name="student_id">101513153</string>
+</resources>
